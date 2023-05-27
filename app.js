@@ -15,7 +15,6 @@ const list_container = document.querySelector(".list-container");
 const dark_mode = document.querySelector(".dark_mode");
 const cream_mode = document.querySelector(".cream_mode");
 const load_more = document.querySelector(".load_more");
-console.log(load_more);
 
 // ------------------- this is load more function -------------
 
