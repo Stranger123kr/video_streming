@@ -15,6 +15,21 @@ const list_container = document.querySelector(".list-container");
 const dark_mode = document.querySelector(".dark_mode");
 const cream_mode = document.querySelector(".cream_mode");
 const load_more = document.querySelector(".load_more");
+console.log(load_more);
+
+// ------------------- this is load more function -------------
+
+// this is show function
+
+function show() {
+  document.querySelector(".load_more").classList.add("show");
+}
+
+// this is hide function
+
+function hide() {
+  document.querySelector(".load_more").classList.remove("show");
+}
 
 // --------------------------------- dark mode  function -----------------------------
 // --------------------------------- first color ---------------------------------
@@ -71,6 +86,7 @@ menu_icon.addEventListener("click", () => {
 // --------------------------------- img fetch api  function -----------------------------
 
 async function fetch_data(range) {
+  show();
   const url = await fetch(
     `https://jsonplaceholder.typicode.com/photos/?_limit=${
       range == null ? 9 : range
@@ -78,6 +94,7 @@ async function fetch_data(range) {
   )
     .then((data) => data.json())
     .then((items) => {
+      hide();
       get_img(items);
     });
 }
@@ -109,8 +126,17 @@ async function get_img(items) {
   list_container.innerHTML = html;
 }
 
+window.addEventListener("scroll", () => {
+  if (
+    window.document.documentElement.offsetHeight - window.innerHeight <=
+    window.pageYOffset
+  ) {
+    increments();
+  }
+});
+
 // ---------------------------------  load more  function -----------------------------
 let increment = 2;
-load_more.addEventListener("click", () => {
+function increments() {
   fetch_data(9 * increment++);
-});
+}
