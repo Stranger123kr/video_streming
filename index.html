@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Youtube_colored_svg-256.png"
+      type="image/x-icon"
+    />
+    <title>YouTube Video Sharing Website</title>
+  </head>
+
+  <body>
+    <!-- this is a loading effect -->
+
+    <div class="loading"></div>
+
+    <!-- /* ============================ this is navbar section ============================= */ -->
+
+    <nav class="flex-div">
+      <!-- ----- nav bar left side items ----- -->
+      <div class="nav-left flex-div">
+        <img src="images/menu.png" class="menu-icon" />
+        <img src="images/logo.png" class="logo" />
+
+        <div class="theme">
+          <div class="dark_mode"></div>
+          <div class="cream_mode"></div>
+        </div>
+      </div>
+
+      <!-- ----- nav bar middle side items ----- -->
+
+      <div class="nav-middle flex-div">
+        <div class="search-box flex-div">
+          <input type="text" autocomplete="off" placeholder="Search" />
+          <img src="images/search.png" />
+        </div>
+        <img src="images/voice-search.png" class="mic-icon" />
+      </div>
+
+      <!-- ----- nav bar right side items ----- -->
+
+      <div class="nav-right flex-div">
+        <img src="images/upload.png" />
+        <img src="images/more.png" />
+        <img src="images/notification.png" />
+        <img src="images/Jack.png" class="user-icon" />
+      </div>
+    </nav>
+
+    <!-- /* ============================ this is hero part section ============================= */ -->
+
+    <div class="sidebar">
+      <!-- /* ============== this is hero left side part section =============== */ -->
+
+      <!-- part 1 -->
+
+      <div class="shortcut-links">
+        <a href="#"
+          ><img src="images/home.png" />
+          <p>Home</p>
+        </a>
+        <a href="#"
+          ><img src="images/explore.png" />
+          <p>Explore</p>
+        </a>
+        <a href="#"
+          ><img src="images/subscriprion.png" />
+          <p>Subscription</p>
+        </a>
+        <a href="#"
+          ><img src="images/library.png" />
+          <p>Library</p>
+        </a>
+        <a href="#"
+          ><img src="images/history.png" />
+          <p>History</p>
+        </a>
+        <a href="#"
+          ><img src="images/cast.png" />
+          <p>Cast Videos</p>
+        </a>
+        <a href="#"
+          ><img src="images/playlist.png" />
+          <p>Playlist</p>
+        </a>
+        <a href="#"
+          ><img src="images/messages.png" />
+          <p>Messages</p>
+        </a>
+        <a href="#"
+          ><img src="images/show-more.png" />
+          <p>Show More</p>
+        </a>
+
+        <hr />
+      </div>
+
+      <!-- part 2 -->
+
+      <div class="subscribed-list">
+        <h3>SUBSCRIBED</h3>
+
+        <a href="#"
+          ><img src="images/Jack.png" />
+          <p>Jack Nicholson</p>
+        </a>
+        <a href="#"
+          ><img src="images/simon.png" />
+          <p>Simon Baker</p>
+        </a>
+        <a href="#"
+          ><img src="images/tom.png" />
+          <p>Tom Hardy</p>
+        </a>
+        <a href="#"
+          ><img src="images/megan.png" />
+          <p>Megan Ryan</p>
+        </a>
+        <a href="#"
+          ><img src="images/cameron.png" />
+          <p>cameron kumar</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- /* ============== this is hero left side part section =============== */ -->
+
+    <div class="container">
+      <!-- banner part -->
+
+      <div class="banner">
+        <img src="images/banner.png" />
+      </div>
+
+      <!-- playlist section 1 -->
+
+      <div class="list-container">
+        <!-- all video are coming form api in this container -->
+      </div>
+
+      <button class="load_more" type="button">Load More</button>
+    </div>
+
+    <!-- =============== load more button ======================== -->
+
+    <script src="app.js"></script>
+  </body>
+</html>

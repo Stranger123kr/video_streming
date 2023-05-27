@@ -1,0 +1,643 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-size: 15px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+
+img {
+  cursor: pointer;
+}
+
+body {
+  background: var(--primary_color);
+}
+
+/* ============================ */
+
+:root {
+  --primary_color: #f9f9f9;
+  --main_color: #fff;
+  --mode_color: #000;
+  --para_color: #5a5a5a;
+  --search_box: #000;
+  --box_shadow: rgba(0, 0, 0, 0.2);
+  --blue_color: #0000ff;
+  --second_color: #f7e1ae;
+}
+
+.cream_mode_on {
+  --primary_color: #f7e1ae;
+  --main_color: #f7e1ae;
+  --mode_color: #000;
+  --para_color: #000;
+  --search_box: #000;
+  --box_shadow: rgba(0, 0, 0, 0.2);
+  --blue_color: #0000ff;
+  --second_color: #fff;
+}
+
+.dark_mode_on {
+  --primary_color: #0f0f0f;
+  --main_color: #0f0f0f;
+  --mode_color: #fff;
+  --para_color: #fff;
+  --search_box: #fff;
+  --box_shadow: rgba(250, 243, 243, 0.2);
+  --blue_color: #fff;
+}
+
+/* ============================= */
+
+/* <!-- this is a loading effect --> */
+
+.loading {
+  background: #e8e8f3
+    url("https://cdn.dribbble.com/users/1229051/screenshots/11975864/media/ec9e55add7d03d553b71580d8575b4b8.gif")
+    no-repeat center center;
+  background-size: 50rem;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+}
+
+/* ============= dark mode  ============== */
+
+.theme {
+  display: flex;
+  align-items: center;
+}
+
+.dark_mode {
+  padding: 1rem 1rem;
+  margin-left: 1rem;
+  border-radius: 3rem;
+  background-color: var(--mode_color);
+}
+
+.cream_mode {
+  padding: 1rem 1rem;
+  margin-left: 1rem;
+  border-radius: 3rem;
+  background-color: var(--second_color);
+}
+
+/* ============================= This is a  vertical scroll bar design ====================== */
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5rem;
+  background: red;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+::placeholder {
+  color: var(--search_box);
+}
+
+/* ==================================  Main code Start here ================================ */
+/* ==================================  This is a navbar ================================ */
+
+.flex-div {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  justify-content: space-between;
+  padding: 0.5rem 2%;
+  box-shadow: 0 0 10px var(--box_shadow);
+  background: var(--main_color);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-left .menu-icon {
+  width: 1.7rem;
+  margin-right: 1.7rem;
+}
+.nav-left .logo {
+  width: 8rem;
+}
+
+.nav-right img {
+  width: 1.7rem;
+  margin-right: 1.5rem;
+}
+
+.nav-right .user-icon {
+  width: 2.2rem;
+  border-radius: 50%;
+  margin-right: 0;
+}
+
+.nav-middle .mic-icon {
+  width: 1.1rem;
+}
+
+.nav-middle .search-box {
+  border: 1px solid #ccc;
+  margin-right: 1rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 2rem;
+}
+
+.nav-middle .search-box input {
+  width: 27rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--search_box);
+}
+
+.nav-middle .search-box img {
+  width: 1rem;
+}
+
+/* =============================== this is left side part of hero section ================================ */
+
+.sidebar {
+  background: var(--main_color);
+  width: 15%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  padding-left: 2%;
+  padding-top: 5.2rem;
+}
+
+.sidebar.small_sidebar {
+  width: 5%;
+}
+.sidebar.small_sidebar a p {
+  display: none;
+}
+.sidebar.small_sidebar h3 {
+  display: none;
+}
+
+.shortcut-links a img {
+  width: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.shortcut-links a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  width: fit-content;
+  color: var(--para_color);
+}
+
+.shortcut-links a:first-child {
+  color: #ed3833;
+}
+
+.sidebar hr {
+  height: 1px;
+  background: #ccc;
+  border: none;
+  width: 85%;
+}
+
+.subscribed-list {
+  margin: 1.5rem 0;
+  font-size: 0.8rem;
+  color: #5a5a5a;
+}
+
+.subscribed-list h3 {
+  margin-bottom: 1.5rem;
+  color: var(--search_box);
+}
+
+.subscribed-list a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  width: fit-content;
+  flex-wrap: wrap;
+  color: var(--para_color);
+}
+
+.subscribed-list a img {
+  width: 1.8rem;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+
+/* =============================== this is right side part of hero section ================================ */
+
+.container {
+  padding: 1.5rem 2% 1.5rem 17%;
+  background: var(--primary_color);
+  /* transition: padding-left 0.2s ease-in-out; */
+}
+
+.large-container {
+  padding-left: 7%;
+}
+
+.banner {
+  width: 100%;
+}
+.banner img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem 1.1rem;
+  margin-top: 1rem;
+}
+
+.vid-list .thumbnail {
+  width: 100%;
+  /* height: 65%; */
+  /* max-height: 75%; */
+  border-radius: 0.5rem;
+}
+
+.vid-list .flex-div {
+  align-items: flex-start;
+  gap: 0.7rem;
+  margin-top: 0.7rem;
+}
+.vid-list .flex-div img {
+  width: 2.3rem;
+  border-radius: 50%;
+}
+
+.vid-info {
+  color: #5a5a5a;
+  font-size: 0.8rem;
+}
+
+.vid-info a {
+  color: var(--para_color);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.vid-info p {
+  margin-bottom: 0.2rem;
+  color: var(--para_color);
+}
+
+/* =============================== this is video.html part ================================ */
+
+.play-container {
+  padding-left: 2%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.play_video {
+  flex-basis: 69%;
+}
+
+.right-sidebar {
+  flex-basis: 30%;
+}
+
+.play_video iframe {
+  width: 100%;
+  height: 50%;
+}
+
+.side-video-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  gap: 0.7rem;
+}
+
+.side-video-list img {
+  width: 50%;
+  border-radius: 0.4rem;
+}
+
+.small-thumbnail {
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+  line-height: 1.5;
+  color: var(--para_color);
+}
+
+.info p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--para_color);
+}
+
+.side-video-list .small-thumbnail {
+  flex-basis: 49%;
+}
+.side-video-list .vid-info {
+  flex-basis: 49%;
+}
+
+.play_video .tags a {
+  color: var(--blue_color);
+  font-size: 0.8rem;
+}
+
+.play_video h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  color: var(--para_color);
+}
+
+.play_video .play-video-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: var(--para_color);
+  font-size: 1rem;
+  margin-top: 0.8rem;
+}
+
+.play_video .play-video-info a img {
+  width: 1.4rem;
+  margin-right: 0.6rem;
+}
+
+.play-video-info div a {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 1rem;
+  color: var(--para_color);
+}
+
+.play_video hr {
+  background: #ccc;
+  border: 0;
+  height: 1px;
+  margin: 0.8rem 0;
+}
+
+.publisher {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.publisher img {
+  width: 3rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.publisher div {
+  flex: 1;
+  color: var(--para_color);
+}
+
+.publisher div p:first-child {
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--mode_color);
+}
+
+.publisher button {
+  padding: 0.8rem 2rem;
+  background: #ed3833;
+  border: none;
+  outline: none;
+  border-radius: 0.3rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.vid-Description {
+  padding-left: 4rem;
+  margin: 1rem 0;
+}
+
+.vid-Description p {
+  line-height: 1.8rem;
+  color: var(--para_color);
+  font-size: 1rem;
+}
+
+.vid-Description h4 {
+  font-size: 1rem;
+  color: var(--para_color);
+  margin-top: 1rem;
+}
+
+.add-comment {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.add-comment img {
+  width: 2.5rem;
+  border-radius: 50%;
+}
+
+.add-comment input {
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  padding-top: 0.8rem;
+  background: transparent;
+  color: var(--search_box);
+}
+
+.old-comments {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  align-items: flex-start;
+}
+
+.old-comments img {
+  width: 2.5rem;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+}
+
+.old-comments h3 {
+  font-size: 1.1rem;
+}
+.old-comments h3 span {
+  font-size: 0.9rem;
+  color: var(--para_color);
+  margin-left: 0.8rem;
+}
+
+.old-comments p {
+  margin-top: 0.5rem;
+  line-height: 1.2rem;
+}
+
+.old-comments .a_comment-action {
+  display: flex;
+  align-items: center;
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+.old-comments .a_comment-action img {
+  border-radius: 0;
+  width: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.old-comments .a_comment-action span {
+  margin-right: 1.3rem;
+  color: var(--para_color);
+}
+
+.old-comments .a_comment-action a {
+  color: var(--blue_color);
+}
+
+.load_more {
+  display: block;
+  padding: 1rem 2rem;
+  background: var(--mode_color);
+  border-radius: 3rem;
+  border: none;
+  outline: none;
+  margin: 1rem auto;
+  margin-top: 3rem;
+  color: var(--main_color);
+}
+
+/* =============================== this is media query part ================================ */
+
+@media (max-width: 980px) {
+  .menu-icon {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+  .container,
+  .large-container {
+    padding-left: 2%;
+  }
+}
+
+@media (max-width: 870px) {
+  .nav-right img {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-middle .search-box {
+    width: 15rem;
+  }
+
+  .nav-middle .mic-icon {
+    display: none;
+  }
+
+  .nav-right .user-icon {
+    display: block;
+    width: 2rem;
+  }
+}
+
+@media (max-width: 445px) {
+  .nav-middle .search-box {
+    display: none;
+  }
+
+  .logo {
+    width: 6rem;
+  }
+}
+
+/* =============================== this is media query part for video.html ================================ */
+
+@media (max-width: 1180px) {
+  .row {
+    display: block;
+  }
+
+  .side-video-list {
+    display: block;
+    margin: 2rem 0;
+  }
+  .side-video-list img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .vid-Description {
+    padding-left: 0%;
+  }
+
+  .old-comments p {
+    font-size: 0.9rem;
+  }
+
+  .old-comments .a_comment-action {
+    font-size: 0.8rem;
+  }
+  .old-comments .a_comment-action img {
+    font-size: 0.8rem;
+  }
+
+  .play_video h3 {
+    font-size: 1.2rem;
+  }
+
+  .play_video .play-video-info p {
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .vid-Description p {
+    line-height: 1.4rem;
+  }
+
+  html {
+    font-size: 14px;
+  }
+}
