@@ -569,6 +569,10 @@ nav {
   }
 }
 
+.load_more_btn {
+  display: none;
+}
+
 /* =============================== this is media query part ================================ */
 
 @media (max-width: 980px) {
