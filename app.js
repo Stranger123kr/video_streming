@@ -15,6 +15,7 @@ const list_container = document.querySelector(".list-container");
 const dark_mode = document.querySelector(".dark_mode");
 const cream_mode = document.querySelector(".cream_mode");
 const load_more = document.querySelector(".load_more");
+const load_more_btn = document.querySelector(".load_more_btn");
 
 // ------------------- this is load more function -------------
 
@@ -93,7 +94,7 @@ async function fetch_data(range) {
   )
     .then((data) => data.json())
     .then((items) => {
-      hide();
+      // hide();
       get_img(items);
     });
 }
@@ -134,8 +135,14 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// ---------------------------------  load more  function -----------------------------
+// ---------------------------------  load more scroll function -----------------------------
 let increment = 2;
 function increments() {
   fetch_data(9 * increment++);
 }
+
+// ---------------------------------  load more btn  function -----------------------------
+
+load_more_btn.addEventListener("click", () => {
+  increments();
+});
