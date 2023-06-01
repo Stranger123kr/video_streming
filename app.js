@@ -89,7 +89,7 @@ async function fetch_data(range) {
   show();
   const url = await fetch(
     `https://jsonplaceholder.typicode.com/photos/?_limit=${
-      range == null ? 8 : range
+      range == null ? 15 : range
     }`
   )
     .then((data) => data.json())
@@ -128,7 +128,7 @@ async function get_img(items) {
 
 window.addEventListener("scroll", () => {
   if (
-    window.document.documentElement.offsetHeight - window.innerHeight <=
+    window.document.documentElement.offsetHeight - window.innerHeight - 500 <=
     window.pageYOffset
   ) {
     increments();
@@ -138,7 +138,7 @@ window.addEventListener("scroll", () => {
 // ---------------------------------  load more scroll function -----------------------------
 let increment = 2;
 function increments() {
-  fetch_data(8 * increment++);
+  fetch_data(15 * increment++);
 }
 
 // ---------------------------------  load more btn  function -----------------------------
