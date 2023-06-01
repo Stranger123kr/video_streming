@@ -128,7 +128,7 @@ async function get_img(items) {
 
 window.addEventListener("scroll", () => {
   if (
-    window.document.documentElement.offsetHeight - window.innerHeight - 500 <=
+    window.document.documentElement.offsetHeight - window.innerHeight <=
     window.pageYOffset
   ) {
     increments();
